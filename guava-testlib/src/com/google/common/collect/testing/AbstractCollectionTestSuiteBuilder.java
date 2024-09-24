@@ -52,8 +52,8 @@ public abstract class AbstractCollectionTestSuiteBuilder<
     extends PerCollectionSizeTestSuiteBuilder<B, TestCollectionGenerator<E>, Collection<E>, E> {
   @SuppressWarnings("rawtypes") // class literals
   @Override
-  protected List<Class<? extends AbstractTester>> getTesters() {
-    return Arrays.<Class<? extends AbstractTester>>asList(
+  protected List<Class<? extends AbstractTester<E>>> getTesters() {
+    return Arrays.<Class<? extends AbstractTester<E>>>asList(
         CollectionAddAllTester.class,
         CollectionAddTester.class,
         CollectionClearTester.class,
